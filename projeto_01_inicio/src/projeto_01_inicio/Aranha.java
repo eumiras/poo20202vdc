@@ -76,49 +76,51 @@ public class Aranha {
 
 	
 	 	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
-		Aranha ana = new Aranha();
-		System.out.println("--- Bem vindo!!---");
-		System.out.println("eu sou Ana, a aranha!");
-		System.out.println("aqui vai o menu <3");
-		System.out.println("Digite o que fazer em seguida:");
-		System.out.println("instagramar n(horas) ---> vamos ficar horas e horas vendo fotos");
-		System.out.println("cantar n(horas)---> laLAlAlaLALalaLAla");
-		System.out.println("alimentar n(quantidade) ---> status do veiculo ");
-		System.out.println("dançar n(horas) ---> dance comigo!! ");
-		System.out.println("end ---> aqui acaba nossa jornada");
-		
-		while(true) {
-			String line = scanner.nextLine();
-			String ui[] = line.split(" ");
-			if (ui[0].equals("end")) {
-				System.out.println("ciaoooo!!");
-				break;
+		try (Scanner scanner = new Scanner(System.in)) {
+			{
+			Aranha ana = new Aranha();
+			System.out.println("--- Bem vindo!!---");
+			System.out.println("eu sou Ana, a aranha!");
+			System.out.println("aqui vai o menu <3");
+			System.out.println("Digite o que fazer em seguida:");
+			System.out.println("instagramar n(horas) ---> vamos ficar horas e horas vendo fotos");
+			System.out.println("cantar n(horas)---> laLAlAlaLALalaLAla");
+			System.out.println("alimentar n(quantidade) ---> status do veiculo ");
+			System.out.println("dançar n(horas) ---> dance comigo!! ");
+			System.out.println("end ---> aqui acaba nossa jornada");
+			
+			while(true) {
+				String line = scanner.nextLine();
+				String ui[] = line.split(" ");
+				if (ui[0].equals("end")) {
+					System.out.println("ciaoooo!!");
+					break;
+				}
+				else if(ui[0].equals("instagramar")) {
+					int horas = Integer.parseInt(ui[1]);
+					ana.instagramar(horas);
+					ana.status();
+				}
+				else if(ui[0].equals("cantar")) {
+					int horas = Integer.parseInt(ui[1]);
+					ana.cantar(horas);
+					ana.status();
+				}
+				else if(ui[0].equals("alimentar")) {
+					int qtd = Integer.parseInt(ui[1]);
+					ana.alimentar(qtd);
+					ana.status();
+				}
+				else if(ui[0].equals("gastar")) {
+					ana.gastar();
+					ana.status();
+				}
+				else if(ui[0].equals("dançar")) {
+					int horas = Integer.parseInt(ui[1]);
+					ana.dançar(horas);
+					ana.status();
+				}
 			}
-			else if(ui[0].equals("instagramar")) {
-				int horas = Integer.parseInt(ui[1]);
-				ana.instagramar(horas);
-				ana.status();
-			}
-			else if(ui[0].equals("cantar")) {
-				int horas = Integer.parseInt(ui[1]);
-				ana.cantar(horas);
-				ana.status();
-			}
-			else if(ui[0].equals("alimentar")) {
-				int qtd = Integer.parseInt(ui[1]);
-				ana.alimentar(qtd);
-				ana.status();
-			}
-			else if(ui[0].equals("gastar")) {
-				ana.gastar();
-				ana.status();
-			}
-			else if(ui[0].equals("dançar")) {
-				int horas = Integer.parseInt(ui[1]);
-				ana.dançar(horas);
-				ana.status();
-			}
-		}
-	}
+}
+		}}
 }
