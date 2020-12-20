@@ -130,6 +130,8 @@ public class Cachorro {
 		System.out.println("comprar (brinquedo) - vamos comprar um brinquedo");
 		System.out.println("destruir (brinquedo) - destruir o brinquedo :P");
 		Chachorro dog = new Cachorro(); 
+		Brinquedo boneco = new Brinquedo();
+		
 		
 		
 		while(true) {
@@ -155,7 +157,17 @@ public class Cachorro {
 			}else if (input [0].equals("turbo")) {
 				dog.brincarLoucamente();
 				System.out.println(dog);
+			}else if (input [0].equals("conhecer")) {
+				dog.fazerAmigo(input[1]);
+				System.out.println(dog);	
+			}else if (input [0].equals("comprar")) {
+				Brinquedo boneco = new Brinquedo(Integer.parseInt(input[1]),Integer.parseInt(input[2]));
+				System.out.println(dog);
+			}else if (input [0].equals("destruir")) {
+				dog.destruir(input[1]);
+				System.out.println(dog);	
 			}
+			
 			
 		}
 		scanner.close();
