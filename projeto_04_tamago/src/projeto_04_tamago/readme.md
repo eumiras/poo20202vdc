@@ -1,4 +1,4 @@
-#Relatório do Projeto Tamagotchi
+**Relatório do Projeto Tamagotchi**
 
 **o que fez:**
 fizemos um pokemon. as classes são o proprio pokemon e a classe EvolutionStone. essa classe aumenta todos os atributos maximos do pokemon e tambem coloca todos eles no nivel maximo de novo. mas há um custo. como o pokemon tem vida maxima, com determinada idade ele morre, nos decidimos colocar como "preço" que, para cada vez que usasse a pedra da evolução, fossem adicionados 10 anos de vida. ou seja, ele ficaria mais perto da morte, já que nao tem nenhum mecanismo capaz de rejuvenescer ou perder os anos ganhos. igual na vida real :( outro ponto interessante eh q a gente fez mensagens de interação muito legais e isso por si só já é um plus.
